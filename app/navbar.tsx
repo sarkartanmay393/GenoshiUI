@@ -12,7 +12,7 @@ export default function Navbar() {
     pathname === '/profile' && 'underline underline-offset-4 font-[500s]';
 
   return (
-    <div className="w-full h-[64px] flex items-center space-x-4 p-4 px-8 text-xl">
+    <div className="w-full h-[64px] flex items-center space-x-4 p-4 sm:px-8 text-xl">
       <h3 className="md:mr-8 font-bold text-2xl">Genoshi</h3>
       <a className={`${underlineCmd}`} href="/">
         Homes
