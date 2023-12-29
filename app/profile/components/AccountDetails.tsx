@@ -1,22 +1,28 @@
-import Input from '../Input';
+import Input from '../../../components/Input';
 
 const AccountDetails = () => {
   return (
-    <div className="w-full md:w-[60%] rounded-md flex justify-center gap-4 m-auto bg-gray-500 p-6">
+    <div className="w-full md:w-[60%] rounded-md flex justify-center items-center m-auto p-6 border-[0px] bg-[rgb(0,0,255,0.2)]">
       <Input
+        rootProps="w-1/2 justify-end"
         label="Current Subscription Plan"
         value={profile.csp}
-        labelProps="w-max text-xl"
+        forcedLabelProps="w-fit"
+        labelProps="text-xl  mr-4"
         valueProps="text-xl font-[600]"
+        forcedValueProps="text-2xl"
       />
       <div className="flex justify-center items-center">
-        <hr className="w-[64px] rotate-90" />
+        <hr className="w-[48px] rotate-90" />
       </div>
       <Input
+        rootProps="w-1/2 justify-start"
         label="Status"
         value={profile.status}
-        labelProps="w-max text-xl"
+        forcedLabelProps="w-fit"
+        labelProps="text-xl  mr-4"
         valueProps="text-xl font-[600]"
+        forcedValueProps="text-2xl"
       />
     </div>
   );

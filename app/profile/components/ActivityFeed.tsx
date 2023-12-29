@@ -17,9 +17,11 @@ const ActivityFeed = () => {
     }
   ];
   return (
-    <div className="w-full md:w-[60%] rounded-md flex justify-center gap-4 m-auto bg-gray-500 p-6">
-      <div className="mx-auto">
-        <h2 className="text-2xl font-bold mb-4">Recent Activity Feed</h2>
+    <div className="w-full md:w-[60%] rounded-md flex flex-col md:flex-row justify-center gap-4 m-auto border-[0px] p-0">
+      <div className="mx-auto my-2">
+        <h2 className="text-2xl font-bold mb-4 text-white">
+          Recent Activity Feed
+        </h2>
         <div className="grid gap-4 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
           {recentActivity.map((activity, index) => (
             <div key={index} className="rounded-lg shadow-md p-4 bg-slate-900">
@@ -33,7 +35,7 @@ const ActivityFeed = () => {
                 {activity.type === 'Query' && (
                   <span className="text-purple-500 font-bold">Query:</span>
                 )}
-                <span className="ml-2">{activity.title}</span>
+                <span className="ml-2 text-white">{activity.title}</span>
               </p>
               <p className="text-gray-500 text-sm">
                 {new Date(activity.timestamp).toLocaleString()}

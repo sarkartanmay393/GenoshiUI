@@ -1,19 +1,15 @@
 'use client';
 
-import { ChangeEventHandler, useState } from 'react';
-import Input from '../Input';
-import EditIcon from '../icons/Edit';
-import EditModal from './EditModal';
+import Input from '../../../components/Input';
+import EditIcon from '../../../components/icons/Edit';
+import Link from 'next/link';
+import useProfile from '../useProfile';
 
 const ProfileDetails = () => {
-  const [form, setForm] = useState({
-    name: 'Tanmay Sarkar',
-    work: 'Senior Software Engineer @AWS',
-    bio: 'Aspiring to be a world known engineer. Being a computer science student, I want to contribute to the projects that will shape upcoming generations.'
-  });
+  const { data } = useProfile();
 
   return (
-    <div className="md:w-[60%] rounded-md flex gap-8 bg-gray-500 p-6 ">
+    <div className="md:w-[60%] rounded-md flex gap-8 p-6 border-[1px] bg-dark-tremor-background-subtle bg-opacity-0">
       <div className="flex flex-col items-center justify-center">
         <img
           width={128}
@@ -24,16 +20,18 @@ const ProfileDetails = () => {
         />
       </div>
       <div className="flex flex-col gap-1">
-        <Input value={form.name} label="Name" valueProps="text-xl font-[400]" />
+        <Input value={data.name} label="Name" valueProps="text-xl font-[400]" />
         <Input
           label="Email"
           value={profile.email}
           valueProps="text-xl font-[400]"
         />
-        <Input label="Bio" value={form.bio} valueProps="text-md font-[400]" />
-        <Input label="Work" value={form.work} valueProps="text-md font-[400]" />
+        <Input label="Bio" value={data.bio} valueProps="text-md font-[400]" />
+        <Input label="Work" value={data.work} valueProps="text-md font-[400]" />
       </div>
-      <EditModal form={form} setForm={setForm} />
+      <Link className="h-fit w-fit" href="/profile/edit">
+        <EditIcon props="w-[16px] text-white" />
+      </Link>
     </div>
   );
 };

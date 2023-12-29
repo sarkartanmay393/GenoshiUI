@@ -13,9 +13,9 @@ import {
 
 const UsageMetrics = () => {
   return (
-    <div className="w-full md:w-[60%] rounded-md flex flex-col md:flex-row justify-center gap-4 m-auto bg-gray-500 p-6">
-      <Card className="max-w-lg">
-        <Title>Tool Usages</Title>
+    <div className="w-full md:w-[60%] rounded-md flex flex-col md:flex-row justify-center gap-4 m-auto border-[0px] p-2">
+      <Card className="max-w-lg bg-dark-tremor-background-muted">
+        <Title className="text-white">Tool Usages</Title>
         <DonutChart
           className="mt-6"
           data={usages}
