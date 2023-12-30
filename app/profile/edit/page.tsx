@@ -16,7 +16,7 @@ export default function ProfileEditPage() {
     <div className="space-y-4 py-4 w-full h-full flex flex-col items-center text-black">
       <h3 className="text-3xl font-bold text-white">Edit Profile</h3>
       <div className="w-full h-full flex items-center justify-center">
-        <div className="w-1/3 flex flex-col rounded-lg p-6 gap-6">
+        <div className="w-full md:w-1/3 flex flex-col rounded-lg p-6 gap-6">
           <div className="flex flex-col gap-2">
             {values.map((d, i) => (
               <div key={i} className="flex flex-col gap-2">

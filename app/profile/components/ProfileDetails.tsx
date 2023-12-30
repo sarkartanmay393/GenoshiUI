@@ -9,8 +9,8 @@ const ProfileDetails = () => {
   const { data } = useProfile();
 
   return (
-    <div className="md:w-[60%] rounded-md flex gap-8 p-6 border-[1px] bg-dark-tremor-background-subtle bg-opacity-0">
-      <div className="flex flex-col items-center justify-center">
+    <div className="rounded-md flex flex-col md:flex-row gap-8 border-[1px] bg-dark-tremor-background-subtle bg-opacity-0 px-1">
+      <div className="flex flex-col items-center justify-center pt-2 sm:pt-0">
         <img
           width={128}
           height={128}
@@ -19,7 +19,7 @@ const ProfileDetails = () => {
           alt="profile_img"
         />
       </div>
-      <div className="flex flex-col gap-1">
+      <div className="flex flex-col gap-1 px-2">
         <Input value={data.name} label="Name" valueProps="text-xl font-[400]" />
         <Input
           label="Email"
@@ -29,8 +29,8 @@ const ProfileDetails = () => {
         <Input label="Bio" value={data.bio} valueProps="text-md font-[400]" />
         <Input label="Work" value={data.work} valueProps="text-md font-[400]" />
       </div>
-      <Link className="h-fit w-fit" href="/profile/edit">
-        <EditIcon props="w-[16px] text-white" />
+      <Link className="h-fit w-fit p-2" href="/profile/edit">
+        <EditIcon props="w-[18px] text-white" />
       </Link>
     </div>
   );

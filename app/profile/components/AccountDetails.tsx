@@ -2,7 +2,7 @@ import Input from '../../../components/Input';
 
 const AccountDetails = () => {
   return (
-    <div className="w-full md:w-[60%] rounded-md flex justify-center items-center m-auto p-6 border-[0px] bg-[rgb(0,0,255,0.2)]">
+    <div className="w-full rounded-md flex justify-center items-center m-auto p-6 my-4 border-[0px] bg-[rgb(127,0,0,0.2)]">
       <Input
         rootProps="w-1/2 justify-end"
         label="Current Subscription Plan"

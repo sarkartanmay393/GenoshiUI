@@ -3,7 +3,7 @@
 import { useState } from 'react';
 import PriceCard from './components/PriceCard';
 
-type BillingInterval = 'lifetime' | 'year' | 'month';
+// type BillingInterval = 'lifetime' | 'year' | 'month';
 
 export default function Pricing() {
   const [selected, setSelected] = useState('');
@@ -41,12 +41,7 @@ const pricingPlans = [
     code: 'bp',
     name: 'Basic Plan',
     price: '$4/month/user',
-    features: [
-      'Up to 10 graphs',
-      'Up to 500 chatbot queries',
-      'Feature 3'
-      // Add more features as needed
-    ]
+    features: ['Up to 10 graphs', 'Up to 500 chatbot queries', 'Feature 3']
   },
   {
     code: 'pp',
@@ -56,7 +51,6 @@ const pricingPlans = [
       'Up to 50 graphs',
       'Up to 1000 chatbot queries',
       'Email + live chat support'
-      // Add more features as needed
     ]
   },
   {
@@ -67,12 +61,10 @@ const pricingPlans = [
       'Unlimited graphs',
       'Ability to upload custom PDFs',
       '24/7 phone + email support'
-      // Add more features as needed
     ]
   }
 ];
 
-// Define a type for the subscription plan
 type SubscriptionPlan = {
   name: string;
   price: string;

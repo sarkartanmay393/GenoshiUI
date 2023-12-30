@@ -17,7 +17,7 @@ const ActivityFeed = () => {
     }
   ];
   return (
-    <div className="w-full md:w-[60%] rounded-md flex flex-col md:flex-row justify-center gap-4 m-auto border-[0px] p-0">
+    <div className="w-full rounded-md flex flex-col md:flex-row justify-center gap-4 m-auto border-[0px] p-0">
       <div className="mx-auto my-2">
         <h2 className="text-2xl font-bold mb-4 text-white">
           Recent Activity Feed
